@@ -1,0 +1,22 @@
+﻿<Window x:Class="KontrolaPristupaDesktop.Registracija"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:KontrolaPristupaDesktop"
+        mc:Ignorable="d"
+        Title="Registracija" Height="450" Width="800">
+    <Grid>
+        <Label Content="Ime:" HorizontalAlignment="Left" Margin="92,90,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.515,-0.517"/>
+        <Label Content="Prezime:" HorizontalAlignment="Left" Margin="69,121,0,0" VerticalAlignment="Top"/>
+        <Label Content="RFID:" HorizontalAlignment="Left" Margin="92,59,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.517,-0.464"/>
+        <TextBox x:Name="txtRFID" HorizontalAlignment="Left" Height="23" Margin="148,63,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="162" IsEnabled="False"/>
+        <TextBox x:Name="txtIme" HorizontalAlignment="Left" Height="23" Margin="148,94,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="162"/>
+        <TextBox x:Name="txtPrezime" HorizontalAlignment="Left" Height="23" Margin="148,124,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="162"/>
+        <Label Content="Slika:" HorizontalAlignment="Left" Margin="87,158,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="btnRegistrirajSe" Content="Registriraj se" HorizontalAlignment="Left" Margin="148,223,0,0" VerticalAlignment="Top" Width="75" Click="BtnRegistrirajSe_Click"/>
+        <Button x:Name="btnSnimiSliku" Content="Snimi sliku" HorizontalAlignment="Left" Margin="148,158,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button x:Name="btnDohvatiRFID" Content="Dohvati RFID" HorizontalAlignment="Left" Margin="315,66,0,0" VerticalAlignment="Top" Width="75" Click="BtnDohvatiRFID_Click"/>
+
+    </Grid>
+</Window>
