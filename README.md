@@ -1,2 +1,2 @@
 # AccessControl
-Access Control Project managed by arduino cards and face recognition
+Access Control app managed by arduino cards and face recognition
