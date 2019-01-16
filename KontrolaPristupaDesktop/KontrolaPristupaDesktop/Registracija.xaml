@@ -10,13 +10,18 @@
         <Label Content="Ime:" HorizontalAlignment="Left" Margin="92,90,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.515,-0.517"/>
         <Label Content="Prezime:" HorizontalAlignment="Left" Margin="69,121,0,0" VerticalAlignment="Top"/>
         <Label Content="RFID:" HorizontalAlignment="Left" Margin="92,59,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.517,-0.464"/>
-        <TextBox x:Name="txtRFID" HorizontalAlignment="Left" Height="23" Margin="148,63,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="162" IsEnabled="False"/>
+        <TextBox x:Name="txtRFID" HorizontalAlignment="Left" Height="23" Margin="148,63,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="162"/>
         <TextBox x:Name="txtIme" HorizontalAlignment="Left" Height="23" Margin="148,94,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="162"/>
         <TextBox x:Name="txtPrezime" HorizontalAlignment="Left" Height="23" Margin="148,124,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="162"/>
-        <Label Content="Slika:" HorizontalAlignment="Left" Margin="87,158,0,0" VerticalAlignment="Top"/>
         <Button x:Name="btnRegistrirajSe" Content="Registriraj se" HorizontalAlignment="Left" Margin="148,223,0,0" VerticalAlignment="Top" Width="75" Click="BtnRegistrirajSe_Click"/>
-        <Button x:Name="btnSnimiSliku" Content="Snimi sliku" HorizontalAlignment="Left" Margin="148,158,0,0" VerticalAlignment="Top" Width="75"/>
         <Button x:Name="btnDohvatiRFID" Content="Dohvati RFID" HorizontalAlignment="Left" Margin="315,66,0,0" VerticalAlignment="Top" Width="75" Click="BtnDohvatiRFID_Click"/>
+        <Button x:Name="btnUkljuciKameru" Margin="439,66,269,328" Content="Ukljuci kameru" RenderTransformOrigin="0.789,0.054" Click="BtnUkljuciKameru_Click" />
+        <Button x:Name="btnSnimiSliku" Margin="540,68,168,326" Content="Snimi sliku" RenderTransformOrigin="0.789,0.054" Click="BtnSnimiSliku_Click" />
+        <GroupBox Margin="407,114,136,88">
+            <Image x:Name="slika" HorizontalAlignment="Left" Height="177" Margin="10,21,0,0" VerticalAlignment="Top" Width="216"/>
+
+
+        </GroupBox>
 
     </Grid>
 </Window>

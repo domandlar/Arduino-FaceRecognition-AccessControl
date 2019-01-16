@@ -9,6 +9,7 @@ namespace KontrolaPristupaDesktop
     public class Korisnik
     {
         public String Rfid { get; set; }
+        public String Slika { get; set; }
         public String Ime { get; set; }
         public String Prezime { get; set; }
     }
