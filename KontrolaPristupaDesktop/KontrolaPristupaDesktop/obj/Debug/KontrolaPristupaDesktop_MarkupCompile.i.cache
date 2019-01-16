@@ -4,16 +4,16 @@
 winexe
 C#
 .cs
-D:\Projekti\Arduino-FaceRecognition-AccessControl\KontrolaPristupaDesktop\KontrolaPristupaDesktop\obj\Debug\
+C:\Users\Domagoj\Documents\Arduino-FaceRecognition-AccessControl\KontrolaPristupaDesktop\KontrolaPristupaDesktop\obj\Debug\
 KontrolaPristupaDesktop
 none
 false
 DEBUG;TRACE
-D:\Projekti\Arduino-FaceRecognition-AccessControl\KontrolaPristupaDesktop\KontrolaPristupaDesktop\App.xaml
+C:\Users\Domagoj\Documents\Arduino-FaceRecognition-AccessControl\KontrolaPristupaDesktop\KontrolaPristupaDesktop\App.xaml
 598572520
-11394042972
-18216818574
-1002111487069
+1-555393787
+191617942804
+100-1925209127
 FaceLogIn.xaml;MainWindow.xaml;PocetnaForma.xaml;PrijavaRfid.xaml;Registracija.xaml;
 
 False

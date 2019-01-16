@@ -160,6 +160,7 @@
     <Compile Include="FaceLogIn.xaml.cs">
       <DependentUpon>FaceLogIn.xaml</DependentUpon>
     </Compile>
+    <Compile Include="FaceLogInViewModel.cs" />
     <Compile Include="Korisnik.cs" />
     <Compile Include="PocetnaForma.xaml.cs">
       <DependentUpon>PocetnaForma.xaml</DependentUpon>

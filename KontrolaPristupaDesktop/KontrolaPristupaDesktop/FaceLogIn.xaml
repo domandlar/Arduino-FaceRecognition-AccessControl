@@ -6,14 +6,17 @@
         xmlns:local="clr-namespace:KontrolaPristupaDesktop"
         mc:Ignorable="d"
         Title="FaceLogIn" Height="450" Width="800">
+    <Window.DataContext>
+        <local:FaceLogInViewModel/>
+    </Window.DataContext>
     <Grid Margin="-297,0,297,0">
-        <Button x:Name="btnUkljuciKameru" Margin="439,66,269,328" Content="Ukljuci kameru" RenderTransformOrigin="0.789,0.054" Click="BtnUkljuciKameru_Click" />
-        <Button x:Name="btnSnimiSliku" Margin="540,68,168,326" Content="Snimi sliku" RenderTransformOrigin="0.789,0.054" Click="BtnSnimiSliku_Click" />
+        <Button x:Name="btnUkljuciKameru" Margin="439,66,269,328" Content="Ukljuci kameru" RenderTransformOrigin="0.789,0.054" Command="{Binding StartSourceCommand}"/>
+        <Button x:Name="btnSnimiSliku" Margin="540,68,168,326" Content="Snimi sliku" RenderTransformOrigin="0.789,0.054" Command="{Binding SaveSnapshotCommand}"/>
         <GroupBox Margin="403,112,140,90">
-            <Image x:Name="slika" HorizontalAlignment="Left" Height="177" Margin="10,21,0,0" VerticalAlignment="Top" Width="216"/>
+            <Image x:Name="slika" HorizontalAlignment="Left" Height="177" Margin="10,21,0,0" VerticalAlignment="Top" Width="216" Source="{Binding Image}"/>
 
 
         </GroupBox>
-        <Button x:Name="btnPrijaviSe" Content="Prijavi se" HorizontalAlignment="Left" Margin="707,290,0,0" VerticalAlignment="Top" Width="75" Click="BtnPrijaviSe_Click"/>
+        <Button x:Name="btnPrijaviSe" Content="Prijavi se" HorizontalAlignment="Left" Margin="707,290,0,0" VerticalAlignment="Top" Width="75"/>
     </Grid>
 </Window>
