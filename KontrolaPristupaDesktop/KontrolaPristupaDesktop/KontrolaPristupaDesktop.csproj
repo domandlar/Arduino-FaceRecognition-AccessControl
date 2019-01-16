@@ -157,7 +157,13 @@
     </ApplicationDefinition>
     <Compile Include="BitmapHelpers.cs" />
     <Compile Include="DBConnect.cs" />
+    <Compile Include="FaceLogIn.xaml.cs">
+      <DependentUpon>FaceLogIn.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Korisnik.cs" />
+    <Compile Include="PocetnaForma.xaml.cs">
+      <DependentUpon>PocetnaForma.xaml</DependentUpon>
+    </Compile>
     <Compile Include="PrijavaRfid.xaml.cs">
       <DependentUpon>PrijavaRfid.xaml</DependentUpon>
     </Compile>
@@ -166,6 +172,10 @@
     </Compile>
     <Compile Include="RegistracijaViewModel.cs" />
     <Compile Include="Rfid.cs" />
+    <Page Include="FaceLogIn.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -178,6 +188,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="PocetnaForma.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="PrijavaRfid.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

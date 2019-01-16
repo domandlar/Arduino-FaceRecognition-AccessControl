@@ -40,21 +40,24 @@ namespace KontrolaPristupaDesktop
 
         private void BtnPrijaviSe_Click(object sender, RoutedEventArgs e)
         {
-            if(txtRfid.Text != "")
+            string rfid = txtRfid.Text.Replace("\r", string.Empty);
+            if (txtRfid.Text != "")
             {
                 db = new DBConnect();
-                string query = "SELECT * FROM korisnik WHERE rfid = '" + txtRfid.Text + "'";
+                string query = "SELECT * FROM korisnik WHERE rfid = '" + rfid + "'";
                 var listOfUsers = db.SelectKorisnik(query);
                 if(listOfUsers.Count != 0)
                 {
                     foreach (Korisnik kor in listOfUsers)
                     {
-                        MessageBox.Show("Uspjesna prijava za " + kor.Ime + " " + kor.Prezime);
+                        MessageBox.Show("Required Two-Factor Autentication for " + kor.Ime + " " + kor.Prezime);
+                        new FaceLogIn(rfid).Show();
+                        this.Close();
                     }
                 }
                 else
                 {
-                    MessageBox.Show("Korisnik ne postoji!");
+                    MessageBox.Show("User does not exist!");
                 }
                 
             }

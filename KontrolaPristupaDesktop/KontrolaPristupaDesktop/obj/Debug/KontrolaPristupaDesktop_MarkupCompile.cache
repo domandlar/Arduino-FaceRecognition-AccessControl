@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 D:\Projekti\Arduino-FaceRecognition-AccessControl\KontrolaPristupaDesktop\KontrolaPristupaDesktop\App.xaml
-3-424977738
+598572520
 11394042972
-12-1149323792
+14-248585019
 1002111487069
-MainWindow.xaml;PrijavaRfid.xaml;Registracija.xaml;
+FaceLogIn.xaml;MainWindow.xaml;PocetnaForma.xaml;PrijavaRfid.xaml;Registracija.xaml;
 
 False
 

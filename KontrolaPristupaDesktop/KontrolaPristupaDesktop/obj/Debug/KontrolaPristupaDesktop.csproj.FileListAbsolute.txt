@@ -177,3 +177,7 @@ D:\Projekti\Arduino-FaceRecognition-AccessControl\KontrolaPristupaDesktop\Kontro
 D:\Projekti\Arduino-FaceRecognition-AccessControl\KontrolaPristupaDesktop\KontrolaPristupaDesktop\obj\Debug\KontrolaPristupaDesktop.csproj.GenerateResource.cache
 D:\Projekti\Arduino-FaceRecognition-AccessControl\KontrolaPristupaDesktop\KontrolaPristupaDesktop\obj\Debug\KontrolaPristupaDesktop.csproj.CoreCompileInputs.cache
 D:\Projekti\Arduino-FaceRecognition-AccessControl\KontrolaPristupaDesktop\KontrolaPristupaDesktop\obj\Debug\KontrolaPristupaDesktop.csproj.CopyComplete
+D:\Projekti\Arduino-FaceRecognition-AccessControl\KontrolaPristupaDesktop\KontrolaPristupaDesktop\obj\Debug\FaceLogIn.g.cs
+D:\Projekti\Arduino-FaceRecognition-AccessControl\KontrolaPristupaDesktop\KontrolaPristupaDesktop\obj\Debug\FaceLogIn.baml
+D:\Projekti\Arduino-FaceRecognition-AccessControl\KontrolaPristupaDesktop\KontrolaPristupaDesktop\obj\Debug\PocetnaForma.g.cs
+D:\Projekti\Arduino-FaceRecognition-AccessControl\KontrolaPristupaDesktop\KontrolaPristupaDesktop\obj\Debug\PocetnaForma.baml
