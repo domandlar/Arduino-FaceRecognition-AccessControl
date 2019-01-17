@@ -52,7 +52,7 @@ namespace KontrolaPristupaDesktop
         {
             InitializeComponent();
             //VideoDevices = new ObservableCollection<FilterInfo>();
-            //this.rfid = rfid;
+            this.DataContext = new FaceLogInViewModel(rfid);
             //GetVideoDevices();
         }
         //public ObservableCollection<FilterInfo> VideoDevices { get; set; }

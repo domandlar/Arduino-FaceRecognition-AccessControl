@@ -68,6 +68,7 @@ namespace KontrolaPristupaDesktop
             get { return _currentDevice; }
             set { Set(ref _currentDevice, value); }
         }
+
         private void GetVideoDevices()
         {
             var devices = new FilterInfoCollection(FilterCategory.VideoInputDevice);
