@@ -46,7 +46,7 @@ namespace KontrolaPristupaDesktop
                 db = new DBConnect();
                 string query = "SELECT * FROM korisnik WHERE rfid = '" + rfid + "'";
                 var listOfUsers = db.SelectKorisnik(query);
-                if(listOfUsers.Count != 0)
+                if (listOfUsers.Count != 0)
                 {
                     foreach (Korisnik kor in listOfUsers)
                     {
@@ -59,8 +59,9 @@ namespace KontrolaPristupaDesktop
                 {
                     MessageBox.Show("User does not exist!");
                 }
-                
+
             }
+
         }
     }
 }

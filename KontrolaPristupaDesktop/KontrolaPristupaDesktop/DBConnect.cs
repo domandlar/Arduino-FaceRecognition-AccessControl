@@ -199,7 +199,7 @@ namespace KontrolaPristupaDesktop
                     korisnik.Rfid = dr["rfid"].ToString();
                     korisnik.Ime = dr["ime"].ToString();
                     korisnik.Prezime = dr["prezime"].ToString();
-
+                    korisnik.Guid = dr["guid"].ToString();
                     listOfUsers.Add(korisnik);
                 }
 

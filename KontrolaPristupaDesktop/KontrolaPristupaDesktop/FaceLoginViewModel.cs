@@ -189,7 +189,7 @@ namespace KontrolaPristupaDesktop
                         if (person.PersonId.ToString() == listOfUsers[0].Guid)
                         {
                             //MessageBox.Show("Uspjesna prijava " + person.Name);
-                           
+
                             new PocetnaForma(listOfUsers[0].Ime, listOfUsers[0].Prezime).Show();
 
                         }
