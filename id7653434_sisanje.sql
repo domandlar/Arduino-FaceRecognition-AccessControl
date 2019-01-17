@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 15, 2019 at 10:32 PM
+-- Generation Time: Jan 17, 2019 at 11:18 AM
 -- Server version: 10.1.30-MariaDB
 -- PHP Version: 7.2.2
 
@@ -30,7 +30,7 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `korisnik` (
   `rfid` varchar(45) NOT NULL,
-  `slika` varchar(45) NOT NULL,
+  `guid` varchar(45) NOT NULL,
   `ime` varchar(45) NOT NULL,
   `prezime` varchar(45) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -39,54 +39,27 @@ CREATE TABLE `korisnik` (
 -- Dumping data for table `korisnik`
 --
 
-INSERT INTO `korisnik` (`rfid`, `slika`, `ime`, `prezime`) VALUES
-('7A4B9A11\r', '', 'Ivo', 'Ivic'),
-('7AD03811', '', 'Domagoj', 'Andlar'),
-('8AF66011', '', 'Lukas ', 'Kristic'),
-('9A328111\r', '', 'Kero', 'Keric'),
-('9A328111', '', 'Matija', 'Benotic');
+INSERT INTO `korisnik` (`rfid`, `guid`, `ime`, `prezime`) VALUES
+('9A328111', '5134d7f0-1e49-42d5-a57d-adc32b957e2b', 'Matija', 'Benotic');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `rfid`
+-- Table structure for table `slika`
 --
 
-CREATE TABLE `rfid` (
-  `id_rfid` int(11) NOT NULL,
-  `value` varchar(45) NOT NULL
+CREATE TABLE `slika` (
+  `id_slike` int(11) NOT NULL,
+  `link` varchar(200) NOT NULL,
+  `korisnik_rfid` varchar(200) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `rfid`
+-- Dumping data for table `slika`
 --
 
-INSERT INTO `rfid` (`id_rfid`, `value`) VALUES
-(6, '9A328111'),
-(7, '8AF66011'),
-(8, '7AD03811'),
-(9, '9A328111'),
-(10, '8AF66011'),
-(11, '7AD03811'),
-(12, '8AF66011'),
-(13, '9A328111'),
-(14, '9A328111'),
-(15, '7AD03811'),
-(16, '7AD03811'),
-(17, '7AD03811'),
-(18, '7AD03811'),
-(19, '7AD03811'),
-(20, '7AD03811'),
-(21, '9A328111'),
-(22, '7AD03811'),
-(23, '9A328111'),
-(24, '9A328111'),
-(25, '9A328111'),
-(26, '9A328111'),
-(27, '7AD03811'),
-(28, '7AD03811'),
-(29, '7AD03811'),
-(30, 'hahaha');
+INSERT INTO `slika` (`id_slike`, `link`, `korisnik_rfid`) VALUES
+(10, 'D:\\Projekti\\Arduino-FaceRecognition-AccessControl\\KontrolaPristupaDesktop\\KontrolaPristupaDesktop\\bin\\Debug\\Slike\\9A328111\\636833172550871527.jpg', '9A328111');
 
 --
 -- Indexes for dumped tables
@@ -97,23 +70,34 @@ INSERT INTO `rfid` (`id_rfid`, `value`) VALUES
 --
 ALTER TABLE `korisnik`
   ADD PRIMARY KEY (`rfid`),
-  ADD UNIQUE KEY `rfid` (`rfid`);
+  ADD UNIQUE KEY `rfid_UNIQUE` (`rfid`);
 
 --
--- Indexes for table `rfid`
+-- Indexes for table `slika`
 --
-ALTER TABLE `rfid`
-  ADD PRIMARY KEY (`id_rfid`);
+ALTER TABLE `slika`
+  ADD PRIMARY KEY (`id_slike`),
+  ADD KEY `fk_slika_korisnik_idx` (`korisnik_rfid`);
 
 --
 -- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT for table `rfid`
+-- AUTO_INCREMENT for table `slika`
 --
-ALTER TABLE `rfid`
-  MODIFY `id_rfid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
+ALTER TABLE `slika`
+  MODIFY `id_slike` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `slika`
+--
+ALTER TABLE `slika`
+  ADD CONSTRAINT `fk_slika_korisnik` FOREIGN KEY (`korisnik_rfid`) REFERENCES `korisnik` (`rfid`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
