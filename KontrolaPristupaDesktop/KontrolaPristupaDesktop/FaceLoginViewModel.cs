@@ -4,6 +4,7 @@ using AForge.Video.DirectShow;
 using GalaSoft.MvvmLight;
 using GalaSoft.MvvmLight.Command;
 using Microsoft.ProjectOxford.Face;
+using Microsoft.ProjectOxford.Face.Contract;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -37,6 +38,8 @@ namespace KontrolaPristupaDesktop
 
         DBConnect db;
 
+        Window window;
+
         public FaceLogInViewModel()
         {
             VideoDevices = new ObservableCollection<FilterInfo>();
@@ -45,7 +48,7 @@ namespace KontrolaPristupaDesktop
             SaveSnapshotCommand = new RelayCommand(SaveSnapshot);
             PrijaviSeCommand = new RelayCommand(PrijaviSe);
         }
-        public FaceLogInViewModel(string rfid)
+        public FaceLogInViewModel(string rfid, Window window)
         {
             VideoDevices = new ObservableCollection<FilterInfo>();
             this.rfid = rfid;
@@ -53,6 +56,7 @@ namespace KontrolaPristupaDesktop
             StartSourceCommand = new RelayCommand(StartCamera);
             SaveSnapshotCommand = new RelayCommand(SaveSnapshot);
             PrijaviSeCommand = new RelayCommand(PrijaviSe);
+            this.window = window;
         }
 
         public ObservableCollection<FilterInfo> VideoDevices { get; set; }
@@ -157,7 +161,19 @@ namespace KontrolaPristupaDesktop
             }
             _writer?.Dispose();
         }
-
+        private string SpremiSliku()
+        {
+            string myUniqueFileName = $@"{DateTime.Now.Ticks}.jpg";
+            string nazivDirektorija = AppDomain.CurrentDomain.BaseDirectory + @"Slike\" + rfid + @"\";
+            nazivSlike = nazivDirektorija + myUniqueFileName;
+            var encoder = new PngBitmapEncoder();
+            encoder.Frames.Add(BitmapFrame.Create(Image));
+            using (var filestream = new FileStream(nazivSlike, FileMode.Create))
+            {
+                encoder.Save(filestream);
+            }
+            return myUniqueFileName;
+        }
 
         private async void PrijaviSe()
         {
@@ -190,7 +206,40 @@ namespace KontrolaPristupaDesktop
                         {
                             //MessageBox.Show("Uspjesna prijava " + person.Name);
 
-                            new PocetnaForma(listOfUsers[0].Ime, listOfUsers[0].Prezime).Show();
+                            string myUniqueFileName = SpremiSliku();
+
+                            /*
+                            personGroupId = "students";
+                            await faceServiceClient.UpdatePersonGroupAsync(personGroupId, "SISstudenti");
+
+                            
+                            string friend1ImageDir = AppDomain.CurrentDomain.BaseDirectory + @"Slike\" + rfid + @"\";
+                            foreach (string imagePath in Directory.GetFiles(friend1ImageDir, "*.jpg"))
+                            {
+                                using (Stream stream = File.OpenRead(imagePath))
+                                {
+                                    // Detect faces in the image and add to Anna
+                                    await faceServiceClient.AddPersonFaceAsync(
+                                        personGroupId, person.PersonId, stream);
+                                }
+                            }
+                            await faceServiceClient.TrainPersonGroupAsync(personGroupId);
+                            TrainingStatus trainingStatus = null;
+                            while (true)
+                            {
+                                trainingStatus = await faceServiceClient.GetPersonGroupTrainingStatusAsync(personGroupId);
+
+                                if (trainingStatus.Status != Status.Running)
+                                {
+                                    break;
+                                }
+
+                                await Task.Delay(1000);
+                            }
+                            */
+
+                            new PocetnaForma(listOfUsers[0].Ime, listOfUsers[0].Prezime, listOfUsers[0].Rfid, listOfUsers[0].Guid, myUniqueFileName).Show();
+                            window.Close();
 
                         }
                         else

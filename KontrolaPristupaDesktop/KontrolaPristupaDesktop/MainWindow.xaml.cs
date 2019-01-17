@@ -28,6 +28,7 @@ namespace KontrolaPristupaDesktop
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             new Prijava().Show();
+            this.Close();
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)

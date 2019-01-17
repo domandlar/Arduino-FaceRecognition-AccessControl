@@ -116,7 +116,9 @@ namespace KontrolaPristupaDesktop
                 if (db.Insert(query))
                 {
                     string personGroupId = "students";
-                    await faceServiceClient.UpdatePersonGroupAsync(personGroupId, "studenti");
+                    //await faceServiceClient.DeletePersonGroupAsync(personGroupId);
+                    //await faceServiceClient.CreatePersonGroupAsync(personGroupId, "SISstudenti");
+                    await faceServiceClient.UpdatePersonGroupAsync(personGroupId, "SISstudenti");
 
                     // Define Anna
                     CreatePersonResult friend1 = await faceServiceClient.CreatePersonAsync(

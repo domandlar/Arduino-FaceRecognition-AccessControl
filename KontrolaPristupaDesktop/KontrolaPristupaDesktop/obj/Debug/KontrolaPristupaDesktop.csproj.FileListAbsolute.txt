@@ -185,3 +185,4 @@ C:\Users\Domagoj\Documents\Arduino-FaceRecognition-AccessControl\KontrolaPristup
 C:\Users\Domagoj\Documents\Arduino-FaceRecognition-AccessControl\KontrolaPristupaDesktop\KontrolaPristupaDesktop\obj\Debug\PocetnaForma.g.cs
 C:\Users\Domagoj\Documents\Arduino-FaceRecognition-AccessControl\KontrolaPristupaDesktop\KontrolaPristupaDesktop\obj\Debug\FaceLogIn.baml
 C:\Users\Domagoj\Documents\Arduino-FaceRecognition-AccessControl\KontrolaPristupaDesktop\KontrolaPristupaDesktop\obj\Debug\PocetnaForma.baml
+D:\Projekti\Arduino-FaceRecognition-AccessControl\KontrolaPristupaDesktop\KontrolaPristupaDesktop\obj\Debug\GeneratedInternalTypeHelper.g.cs

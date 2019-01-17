@@ -5,18 +5,22 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:KontrolaPristupaDesktop"
         mc:Ignorable="d"
-        Title="FaceLogIn" Height="450" Width="800">
+        Title="FaceLogIn" Height="450" Width="815.75">
     <Window.DataContext>
         <local:FaceLogInViewModel/>
     </Window.DataContext>
     <Grid Margin="-297,0,297,0">
-        <Button x:Name="btnUkljuciKameru" Margin="439,66,269,328" Content="Ukljuci kameru" RenderTransformOrigin="0.789,0.054" Command="{Binding StartSourceCommand}"/>
-        <Button x:Name="btnSnimiSliku" Margin="540,68,168,326" Content="Snimi sliku" RenderTransformOrigin="0.789,0.054" Command="{Binding SaveSnapshotCommand}"/>
-        <GroupBox Margin="403,112,140,90">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="97*"/>
+            <ColumnDefinition Width="711*"/>
+        </Grid.ColumnDefinitions>
+        <Button x:Name="btnUkljuciKameru" Margin="305.75,68,288,326" Content="Ukljuci kameru" RenderTransformOrigin="0.789,0.054" Command="{Binding StartSourceCommand}" Grid.Column="1"/>
+        <Button x:Name="btnSnimiSliku" Margin="442.75,68,140,326" Content="Snimi sliku" RenderTransformOrigin="0.789,0.054" Command="{Binding SaveSnapshotCommand}" Grid.Column="1"/>
+        <GroupBox Margin="305.75,112,140,90" Grid.Column="1">
             <Image x:Name="slika" HorizontalAlignment="Left" Height="177" Margin="10,21,0,0" VerticalAlignment="Top" Width="216" Source="{Binding Image}"/>
 
 
         </GroupBox>
-        <Button x:Name="btnPrijaviSe" Content="Prijavi se" HorizontalAlignment="Left" Margin="707,290,0,0" VerticalAlignment="Top" Width="75" Command="{Binding PrijaviSeCommand}"/>
+        <Button x:Name="btnPrijaviSe" Content="Prijavi se" HorizontalAlignment="Left" Margin="588.75,210,0,0" VerticalAlignment="Top" Width="75" Command="{Binding PrijaviSeCommand}" Grid.Column="1"/>
     </Grid>
 </Window>
