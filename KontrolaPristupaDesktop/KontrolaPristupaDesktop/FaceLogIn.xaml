@@ -17,6 +17,6 @@
 
 
         </GroupBox>
-        <Button x:Name="btnPrijaviSe" Content="Prijavi se" HorizontalAlignment="Left" Margin="707,290,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button x:Name="btnPrijaviSe" Content="Prijavi se" HorizontalAlignment="Left" Margin="707,290,0,0" VerticalAlignment="Top" Width="75" Command="{Binding PrijaviSeCommand}"/>
     </Grid>
 </Window>
